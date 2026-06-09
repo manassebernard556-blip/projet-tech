@@ -1,0 +1,72 @@
+‎<!DOCTYPE html>
+‎<html lang="fr">
+‎<head>
+‎    <meta charset="UTF-8">
+‎    <title>ALVARES TECH ZONE</title>
+‎    <style>
+‎        body { background-color: #050b14; color: #e0e0e0; font-family: 'Courier New', monospace; margin: 0; padding: 20px; }
+‎        .container { max-width: 800px; margin: auto; text-align: center; }
+‎        h1 { color: #00d4ff; border-bottom: 2px solid #00d4ff; padding-bottom: 10px; }
+‎        .btn { background: #1a2a3a; color: #ffcc00; border: 1px solid #ffcc00; padding: 15px; margin: 10px; cursor: pointer; display: inline-block; text-decoration: none; font-weight: bold; }
+‎        .page { display: none; }
+‎        .active { display: block; }
+‎        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #0b1420; }
+‎        td { border: 1px solid #333; padding: 15px; text-align: left; }
+‎        code { background: #000; color: #00ff00; padding: 10px; display: block; text-align: left; overflow-x: auto; margin-top: 10px; }
+‎    </style>
+‎</head>
+‎<body>
+‎
+‎<div class="container">
+‎    <!-- PAGE ACCUEIL -->
+‎    <div id="home" class="page active">
+‎        <h1>BIENVENUE CHEZ INGÉNIEUR ALVARÉS</h1>
+‎        <button class="btn" onclick="show('bot')">BOT 🤖</button>
+‎        <button class="btn" onclick="show('ia')">IA 🎓</button>
+‎        <br>
+‎        <button class="btn" onclick="show('site')">CRÉER UN SITE</button>
+‎        <button class="btn" onclick="show('vpn')">SERVICES VPN</button>
+‎        <button class="btn" onclick="show('tools')">OUTILS TERMUX</button>
+‎    </div>
+‎
+‎    <!-- PAGE BOT -->
+‎    <div id="bot" class="page">
+‎        <h1>BOT WHATSAPP</h1>
+‎        <table>
+‎            <tr><td>BOT COMMENT LE CONNECTER A WHATSAPP</td></tr>
+‎            <tr><td>INSÉRER ICI TON NUMÉRO 👇</td></tr>
+‎            <tr><td>[ + ] <input type="text" placeholder="Ton numéro ici"></td></tr>
+‎        </table>
+‎        <p><em>Le bot supprimera automatiquement tout lien envoyé dans le groupe avec le message : "🚫 Lien interdit supprimé par le bot de ALVARES TECH ZONE"</em></p>
+‎        <button class="btn" onclick="show('home')">Retour</button>
+‎    </div>
+‎
+‎    <!-- PAGE IA -->
+‎    <div id="ia" class="page">
+‎        <h1>CRÉATION D'IA (KAREN)</h1>
+‎        <table>
+‎            <tr><td>DONC QUAND VOUS AUREZ LA CRÉATION DE VOTRE IA DANS LE SCRIPT, UNE FOIS DANS TERMUX VOUS DEVEZ AVOIR UNE CLÉ GEMINI QUE VOUS DEVEZ RÉCUPÉRER DANS GOOGLE STUDIO.</td></tr>
+‎            <tr><td>UNE FOIS QUE VOUS AVEZ ACCÉDÉ À GOOGLE STUDIO, CONNECTEZ VOTRE E-MAIL, APPUYEZ SUR CRÉER UNE CLÉ ET COLLEZ-LA DANS LE SCRIPT DE L'IA DANS TERMUX.</td></tr>
+‎        </table>
+‎        <code>[Copie ici le script Python que tu m'as donné précédemment]</code>
+‎        <button class="btn" onclick="show('home')">Retour</button>
+‎    </div>
+‎
+‎    <!-- PAGE CRÉER SITE -->
+‎    <div id="site" class="page">
+‎        <h1>CRÉER UN SITE DANS TERMUX</h1>
+‎        <p>Tape ces commandes :</p>
+‎        <code>pkg install apache2<br>pkg install php<br>mv index.html /data/data/com.termux/files/usr/share/apache2/default-site/htdocs/</code>
+‎        <button class="btn" onclick="show('home')">Retour</button>
+‎    </div>
+‎</div>
+‎
+‎<script>
+‎    function show(id) {
+‎        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+‎        document.getElementById(id).classList.add('active');
+‎    }
+‎</script>
+‎</body>
+‎</html>
+‎
